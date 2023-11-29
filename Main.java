@@ -18,7 +18,6 @@ public class Main {
 		
 	try (Connection conn = getConnection()) {
 		GetData fbwz = new GetData(dataType, conn);
-		// function
 		JSONArray users_info = fbwz.toJSON();
 		fbwz.writeJSON(users_info);
 		conn.close();
